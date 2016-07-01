@@ -1,0 +1,255 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1.3px;
+  font-weight: lighter;
+  width: 100%;
+}
+
+input, input[list]::-webkit-input-placeholder {
+   font-family: 'Roboto', sans-serif;
+   font-size: 18px;
+}
+
+input, input[list]:-moz-placeholder { /* Firefox 18- */
+   font-family: 'Roboto', sans-serif;
+   font-size: 18px;
+}
+
+input, input[list]::-moz-placeholder {  /* Firefox 19+ */
+   font-family: 'Roboto', sans-serif;
+   font-size: 18px;
+}
+
+input, input[list]:-ms-input-placeholder {  
+   font-family: 'Roboto', sans-serif;
+   font-size: 18px;
+}
+
+button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: #707070;
+  height: 43px;
+  border: 1px solid #ccc;
+  width: 150px;
+  border-radius: 10px;
+  padding-top: 5px;
+}
+
+.register button {
+  position: absolute;
+  margin-left: -70px;
+  margin-top: 700px;
+  background-color: white;
+}
+
+.top-logo {
+  position: absolute;
+  height: auto;
+  width: 125px;
+  margin-left: -70px;
+  margin-top: 10px;
+}
+
+#vis {
+  min-width: 1100px;
+  height: 750px;
+  position: absolute;
+  display: inline;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+
+  background: rgb(136, 61, 210); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(180deg, rgb(136, 61, 210), rgb(40, 141, 208)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(180deg, rgb(136, 61, 210), rgb(40, 141, 208)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(180deg, rgb(136, 61, 210), rgb(40, 141, 208)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(180deg, rgb(136, 61, 210), rgb(40, 141, 208)); /* Standard syntax */
+}
+
+#vis h4 {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  min-width: 1100px;
+  position: absolute;
+  width: 100%;
+  margin: auto;
+  margin-top: 100px;
+}
+
+svg {
+  margin-top: 150px;
+}
+
+.link {
+  stroke: #ccc;
+}
+
+.node text {
+  pointer-events: none;
+  font: 10px sans-serif;
+}
+
+.mid-section {
+  position: absolute;
+  top: 757px;
+}
+
+.mid-section img {
+  margin-left: 150px;
+  float: left;
+}
+
+.mid-section-copy {
+  float: left;
+  margin-left: 650px;
+  margin-top: 150px;
+  position: absolute;
+  width: 400px;
+}
+
+h1 {
+  font-size: 30px;
+  color: #636363;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 28px;
+  color: #707070;
+}
+
+.bottom-banner {
+  width: 100%;
+  min-width: 1100px;
+  height: 175px;
+  position: absolute;
+  top: 1248px;
+
+  color: white;
+  font-size: 30px;
+  letter-spacing: .5px;
+  line-height: 175px;
+  
+  background: rgb(136, 61, 210); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(100deg, rgb(40, 141, 208), rgb(155,219,81)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(100deg, rgb(40, 141, 208), rgb(155,219,81)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(100deg, rgb(40, 141, 208), rgb(155,219,81)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(100deg, rgb(40, 141, 208), rgb(155,219,81)); /* Standard syntax */
+}
+
+.bottom-banner h1 {
+  color: white;
+  padding-left: 160px;
+  line-height: 150px;
+}
+
+.thin-banner {
+  width: 100%;
+  min-width: 1100px;
+  height: 7px;
+  position: absolute;
+  top: 1870px;
+
+  background: rgb(136, 61, 210); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(100deg, rgb(40, 141, 208), rgb(155,219,81)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(100deg, rgb(40, 141, 208), rgb(155,219,81)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(100deg, rgb(40, 141, 208), rgb(155,219,81)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(100deg, rgb(40, 141, 208), rgb(155,219,81)); /* Standard syntax */
+}
+
+.email-form {
+  position: absolute;
+  height: 400px;
+  width: 100%;
+  min-width: 1100px;
+  top: 1423px;
+  
+  padding-top: 50px;
+  background-color: #f2f2f2;
+}
+
+.email-form a {
+  color: #96d856;
+  text-decoration: none;
+}
+
+form {
+  padding-left: 160px;
+}
+
+.email-form h1, .email-form h4 {
+  padding-left: 160px;
+  margin-right: 100px;
+}
+
+input {
+  display: inline;
+}
+
+input.email, input[list] {
+  width: 350px;
+  height: 35px;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+input[list] {
+  margin-top: 20px;
+}
+
+.email-form button {
+  background-color: #f2f2f2;
+  margin-left: 5px;
+  margin-bottom: 20px;
+}
+
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+
+  padding: 10px;
+  margin-top: 7px;
+  margin-left: 8px;
+  float: left;
+  display: inline;
+}
+
+.its-a-brand {
+  display: inline;
+  margin-left: -155px;
+}
+
+.bottom-brands {
+  width: 100%;
+  min-width: 1100px;
+  height: 300px;
+  position: absolute;
+  top: 1877px;
+}
+
+.footer {
+  width: 100%;
+  min-width: 1100px;
+  height: 200px;
+  position: absolute;
+  top: 2177px;
+  background-color: black;
+}
+
+.footer-logo {
+  top: 45px;
+  position: absolute;
+  width: 180px;
+  height: auto;
+  padding-left: 144px;
+}
+

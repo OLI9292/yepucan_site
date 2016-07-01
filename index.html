@@ -1,11 +1,62 @@
 <!DOCTYPE html>
+<html>
 <head>
-  <title>Oliver Plunkett</title>
-  <style type="text/css" href="index.css"></style>
+<title>yepUcan</title>
+
+<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
 </head>
+
 <body>
-  <canvas id="canvasA"></canvas>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
-  <script type="text/javascript" src="index.js"></script>
+<section id="vis">
+<img class="top-logo" src="images/yepucan-white.png">
+<h4>Next generation reward platform connecting the U-Generation with brands.</h4>
+<div class="register">
+  <button type="button" onclick="smoothScroll(document.getElementsByClassName('email-form')[0])">Register</button>
+</div>
+</section> 
+
+
+<div class="mid-section">
+  <img src="images/phone.png">
+  <div class="mid-section-copy">
+    <h1>Build Your Profile<h1>
+    <h4>Connect & Unlock your Full Value<br>and empower financial independence.</h4>
+  </div>
+</div>
+
+<div class="bottom-banner">
+  <h1>YepUCan is coming soon. Stay updated!</h1>
+</div>
+
+<div class="email-form">
+  <h1>Register<h1>
+  <h4>We'll notify you when the app becomes available. If you have any other questions, email <a href = "">contact@yepucan.com</a></h4>
+  <form action="">
+    <input type="text" class="email" name="email" placeholder="ebaqdesign@gmail.com">
+    <button type="button">Sign Up</button>
+    <br>
+    <input type="checkbox" class="brand-checkbox" name="brand" value="brand"><h4 class="its-a-brand">It's a brand.</h4>
+    <br>
+    
+    <input list="brands" placeholder="Select category">
+    <datalist id="brands">
+      <option value="Apparel">
+      <option value="Car Service">
+      <option value="Clothing">
+      <option value="Technology">
+      <option value="Health">
+    </datalist> 
+  </form>
+</div>
+
+<div class="thin-banner"></div>
+
+<div class="bottom-brands"></div>
+
+<div class="footer"><img class="footer-logo" src="images/footer-logo.png"></div>
+
+<script type="text/javascript" src="graph.js"></script>
+<link rel="stylesheet" type="text/css" href="main.css">
 </body>
 </html>
