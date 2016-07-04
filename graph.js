@@ -1,3 +1,7 @@
+/*
+** Animation
+*/ 
+
 var width = 1100,
     height = 600;
 
@@ -6,18 +10,11 @@ var svg = d3.select("#vis").append("svg")
     .attr("height", height);
 
 var force = d3.layout.force()
-    .charge(-50000)
-    .friction(.2)
-    .gravity(0.2)
+    .charge(-30000)
+    .friction(.15)
     .size([width, height])
     .linkDistance(function(d) { return d.value })
-    .linkStrength(function(l, i) {
-      if (l.target.group === 1) {
-        return 2.5;
-      } else {
-        return 1;
-      }
-    });
+    .linkStrength(1.5);
 
 d3.json("data.json", function(error, json) {
   if (error) throw error;
@@ -37,23 +34,16 @@ d3.json("data.json", function(error, json) {
     .enter().append("g")
       .attr("class", "node");
 
-  var root = node[0][[node[0].length-1]];
-  root.radius = 0;
-  root.fixed = true;
-
-  svg.on("mousemove", function() {
-    var p1 = d3.mouse(this);
-    root.px = p1[0];
-    root.py = p1[1];
-    force.resume();
-  });
+  node.append("circle")
+    .attr("r", 34)
+    .style("fill", '#506fce');
 
   node.append("image")
-      .attr("xlink:href",  function(d) { return d.img;})
-      .attr("x", function(d, i) { return (i === 0) ? -62.5 : -35})
-      .attr("y", function(d, i) { return (i === 0) ? -62.5 : -35})
-      .attr("width", function(d, i) { return (i === 0) ? 125 : 70})
-      .attr("height", function(d, i) { return (i === 0) ? 125 : 70});
+    .attr("xlink:href",  function(d) { return d.img;})
+    .attr("x", function(d, i) { return (i === 0) ? -62.5 : -35})
+    .attr("y", function(d, i) { return (i === 0) ? -62.5 : -35})
+    .attr("width", function(d, i) { return (i === 0) ? 125 : 70})
+    .attr("height", function(d, i) { return (i === 0) ? 125 : 70});
 
   force.on("tick", function(e) {
 
@@ -63,44 +53,46 @@ d3.json("data.json", function(error, json) {
         .attr("y2", function(d) { return d.target.y; })
     
     node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+  });
 
-    var q = d3.geom.quadtree(node[0]),
-      i = 0,
-      n = node[0].length;
+  /*
+  ** Mouseover gravity effect
+  */ 
 
-    while (++i < n) q.visit(collide(node[0][i]));
+  svg.on("mousemove", function() {
 
-    svg.selectAll("circle")
-      .attr("cx", function(d) { return d.x; })
-      .attr("cy", function(d) { return d.y; });
+    var p1 = d3.mouse(this);
+    var distances = node[0].map(function(n) {
+      return Math.sqrt(Math.pow(Math.abs(p1[0] - n['__data__']['x']), 2) + 
+             Math.pow(Math.abs(p1[1] - n['__data__']['y']), 2))
+    });
+
+    var closestNodeIndex = indexOfSmallest(distances);
+    var closestLinksIndices = [];
+
+    for (var i = 0; i < json['links'].length; i++) {
+      if ((json['links'][i]['source']['index'] === closestNodeIndex) || 
+          (json['links'][i]['target']['index'] === closestNodeIndex)) {
+        closestLinksIndices.push(i);
+      }
+    }
+
+    force.linkStrength(function(l, i) {
+      if (closestLinksIndices.indexOf(i) >= 0) {
+        return 3;
+      } 
+      else {
+        return 1.5;
+      }
+    });
+
+    force.start();
   });
 });
 
-function collide(node) {
-  var r = node.radius + 5,
-      nx1 = node.x - r,
-      nx2 = node.x + r,
-      ny1 = node.y - r,
-      ny2 = node.y + r;
-  return function(quad, x1, y1, x2, y2) {
-    if (quad.point && (quad.point !== node)) {
-      var x = node.x - quad.point.x,
-          y = node.y - quad.point.y,
-          l = Math.sqrt(x * x + y * y),
-          r = node.radius + quad.point.radius;
-      if (l < r) {
-        l = (l - r) / l * .1;
-        node.x -= x *= l;
-        node.y -= y *= l;
-        quad.point.x += x;
-        quad.point.y += y;
-      }
-    }
-    return x1 > nx2 || x2 < nx1 || y1 > ny2 || y2 < ny1;
-  };
-}
-
-// Smooth scroll when clicking register
+/*
+** Smooth scroll when clicking register
+*/ 
 
 window.smoothScroll = function(target) {
     var scrollContainer = target;
@@ -124,4 +116,23 @@ window.smoothScroll = function(target) {
     scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
 }
 
+/*
+** Helper functions
+*/ 
 
+function indexOfSmallest(a) {
+  var lowest = 0;
+  for (var i = 1; i < a.length; i++) {
+    if (a[i] < a[lowest]) lowest = i;
+  }
+  return lowest;
+}
+
+function includes(k) {
+  for(var i=0; i < this.length; i++){
+    if( this[i] === k || ( this[i] !== this[i] && k !== k ) ){
+      return true;
+    }
+  }
+  return false;
+}

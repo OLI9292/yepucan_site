@@ -84,11 +84,21 @@ svg {
 
 .link {
   stroke: #ccc;
+  opacity: 0.5;
 }
 
 .node text {
   pointer-events: none;
   font: 10px sans-serif;
+}
+
+circle {
+  fill: black;
+  z-index: -1;
+}
+
+img {
+  z-index: 1;
 }
 
 .mid-section {
