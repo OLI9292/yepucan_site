@@ -6,17 +6,13 @@ var w = window.innerWidth,
     h = window.innerHeight - 130,
     width, height;
 
-if (w > 1300) {
-  width = 1300;
-} else if (w < 800) {
+if (w < 800) {
   width = 800;
 } else {
   width = w;
 }
 
-if (h > 700) {
-  height = 700;
-} else if (h < 450) {
+if (h < 450) {
   height = 450;
 } else {
   height = h;
