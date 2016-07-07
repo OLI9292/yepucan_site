@@ -1,8 +1,36 @@
 body {
   font-family: 'Roboto', sans-serif;
   letter-spacing: 1.3px;
-  font-weight: lighter;
   width: 100%;
+}
+
+h1 {
+  font-size: 30px;
+  color: #636363;
+  font-weight: 100;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 28px;
+  color: #707070;
+  font-weight: 100;
+}
+
+button {
+  font-family: 'Roboto', sans-serif;
+  font-style: bold;
+  font-size: 20px;
+  color: #636363;
+  height: 43px;
+  border: 1px solid #ccc;
+  width: 150px;
+  border-radius: 10px;
+  padding-top: 5px;
+}
+
+button:focus {
+  outline:0;
 }
 
 input, input[list]::-webkit-input-placeholder {
@@ -25,40 +53,15 @@ input, input[list]:-ms-input-placeholder {
    font-size: 18px;
 }
 
-button {
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-  color: #707070;
-  height: 43px;
-  border: 1px solid #ccc;
-  width: 150px;
-  border-radius: 10px;
-  padding-top: 5px;
-}
 
-.register button {
-  position: absolute;
-  margin-left: -70px;
-  margin-top: 700px;
-  background-color: white;
-}
-
-.top-logo {
-  position: absolute;
-  height: auto;
-  width: 125px;
-  margin-left: -70px;
-  margin-top: 10px;
-}
 
 #vis {
-  min-width: 1100px;
-  height: 750px;
-  position: absolute;
-  display: inline;
+  height: 100vh;
+  min-height: 700px;
+  width: 100%;
+  min-width: 700px;
   margin: auto;
   text-align: center;
-  width: 100%;
 
   background: rgb(136, 61, 210); /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(180deg, rgb(136, 61, 210), rgb(40, 141, 208)); /* For Safari 5.1 to 6.0 */
@@ -67,20 +70,49 @@ button {
   background: linear-gradient(180deg, rgb(136, 61, 210), rgb(40, 141, 208)); /* Standard syntax */
 }
 
-#vis h4 {
+.header {
+  width: 100%;
+  min-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+.header h4 {
   color: white;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
-  min-width: 1100px;
-  position: absolute;
-  width: 100%;
-  margin: auto;
-  margin-top: 100px;
+  margin-top: 10px; 
+  height: 10px;
 }
 
-svg {
-  margin-top: 150px;
+.top-logo {
+  height: auto;
+  width: 125px;
+  margin-top: 20px;
 }
+
+.register {
+  margin-top: -75px;
+  width: 100%;
+  min-width: 700px;
+  text-align: center;
+}
+
+.register button {
+  margin: auto;
+  background-color: white;
+  color: #080808;
+  border: 2px solid rgb(40, 141, 208);
+}
+
+button:active {
+  -moz-box-shadow:    inset 0 0 10px rgb(155,219,81);
+  -webkit-box-shadow: inset 0 0 10px rgb(155,219,81);
+  box-shadow:         inset 0 0 10px rgb(155,219,81);
+}
+
+
+
 
 .link {
   stroke: #ccc;
@@ -102,45 +134,40 @@ img {
 }
 
 .mid-section {
-  position: absolute;
-  top: 757px;
+  width: 100%;
+  height: 490px;
+  margin-top: 31px;
+  z-index: 3;
+}
+
+svg {
+  z-index: 1;
 }
 
 .mid-section img {
+  height: 100%;
+  width: auto;
   margin-left: 150px;
   float: left;
 }
 
 .mid-section-copy {
-  float: left;
   margin-left: 650px;
-  margin-top: 150px;
-  position: absolute;
   width: 400px;
-}
-
-h1 {
-  font-size: 30px;
-  color: #636363;
-}
-
-h4 {
-  font-size: 18px;
-  line-height: 28px;
-  color: #707070;
+  position: absolute;
+  margin-top: 165px;
 }
 
 .bottom-banner {
+  height: 175px;
   width: 100%;
   min-width: 1100px;
-  height: 175px;
-  position: absolute;
-  top: 1248px;
-
+  margin-top: -20px;
+  
   color: white;
   font-size: 30px;
   letter-spacing: .5px;
-  line-height: 175px;
+  line-height: 155px;
   
   background: rgb(136, 61, 210); /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(100deg, rgb(40, 141, 208), rgb(155,219,81)); /* For Safari 5.1 to 6.0 */
@@ -152,37 +179,25 @@ h4 {
 .bottom-banner h1 {
   color: white;
   padding-left: 160px;
-  line-height: 150px;
+  line-height: 175px;
+  width: 70%;
 }
 
 .bottom-banner-logo {
   height: auto;
   width: 150px;
-  position: absolute;
   margin-left: 825px;
-  margin-top: -150px;
+  margin-top: -155px;
+  float: left;
 }
 
-.thin-banner {
-  width: 100%;
-  min-width: 1100px;
-  height: 7px;
-  position: absolute;
-  top: 1870px;
 
-  background: rgb(136, 61, 210); /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(100deg, rgb(40, 141, 208), rgb(155,219,81)); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(100deg, rgb(40, 141, 208), rgb(155,219,81)); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(100deg, rgb(40, 141, 208), rgb(155,219,81)); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(100deg, rgb(40, 141, 208), rgb(155,219,81)); /* Standard syntax */
-}
+
 
 .email-form {
-  position: absolute;
   height: 400px;
   width: 100%;
   min-width: 1100px;
-  top: 1423px;
   
   padding-top: 50px;
   background-color: #f2f2f2;
@@ -246,17 +261,31 @@ input[type=checkbox]
   margin-left: -155px;
 }
 
+
+
+
+.thin-banner {
+  width: 100%;
+  min-width: 1100px;
+  height: 10px;
+
+  background: rgb(136, 61, 210); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(100deg, rgb(40, 141, 208), rgb(155,219,81)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(100deg, rgb(40, 141, 208), rgb(155,219,81)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(100deg, rgb(40, 141, 208), rgb(155,219,81)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(100deg, rgb(40, 141, 208), rgb(155,219,81)); /* Standard syntax */
+}
+
 .bottom-brands {
   width: 100%;
   min-width: 1100px;
   height: 300px;
-  position: absolute;
-  top: 1877px;
 }
 
 .bottom-brands-images {
   width: 900px;
   height: auto;
+  text-align: center;
   margin-left: 155px;
   margin-top: 50px;
 }
@@ -265,16 +294,13 @@ input[type=checkbox]
   width: 100%;
   min-width: 1100px;
   height: 200px;
-  position: absolute;
-  top: 2177px;
   background-color: #080808;
 }
 
 .footer-logo {
-  top: 45px;
-  position: absolute;
   width: 180px;
   height: auto;
   padding-left: 144px;
+  margin-top: 45px;
 }
 

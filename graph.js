@@ -2,8 +2,25 @@
 ** Animation
 */ 
 
-var width = 1100,
-    height = 600;
+var w = window.innerWidth,
+    h = window.innerHeight - 130,
+    width, height;
+
+if (w > 1300) {
+  width = 1300;
+} else if (w < 800) {
+  width = 800;
+} else {
+  width = w;
+}
+
+if (h > 700) {
+  height = 700;
+} else if (h < 450) {
+  height = 450;
+} else {
+  height = h;
+}
 
 var svg = d3.select("#vis").append("svg")
     .attr("width", width)
@@ -18,6 +35,26 @@ var force = d3.layout.force()
 
 d3.json("data.json", function(error, json) {
   if (error) throw error;
+
+  // Center foci
+  json['nodes'][0]['x'] = width / 2;
+  json['nodes'][0]['y'] = height / 2;
+
+  // Top-left foci
+  json['nodes'][5]['x'] = width / 8;
+  json['nodes'][5]['y'] = height / 4;
+
+  // Top-right foci
+  json['nodes'][6]['x'] = 7 * width / 8;
+  json['nodes'][6]['y'] = height / 4;
+
+  // Bottom-left foci
+  json['nodes'][7]['x'] = width / 8;
+  json['nodes'][7]['y'] = 3 * height / 4;
+
+  // Bottom-right foci
+  json['nodes'][8]['x'] = 7 * width / 8;
+  json['nodes'][8]['y'] = 3 * height / 4;
 
   force
       .nodes(json.nodes)
@@ -35,7 +72,9 @@ d3.json("data.json", function(error, json) {
       .attr("class", "node");
 
   node.append("circle")
-    .attr("r", 34)
+    .attr("r", function(d, i) { 
+      return (d['group'] === 3) ? 33 : 0;
+    })
     .style("fill", '#506fce');
 
   node.append("image")
@@ -115,6 +154,15 @@ window.smoothScroll = function(target) {
     }
     scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
 }
+
+// Check brand checkbox if category is selected
+$(".brands").on("input", function() {
+  if ($(".brands").val().length > 0) {
+    $('.brand-checkbox').prop('checked', true);
+  } else {
+    $('.brand-checkbox').prop('checked', false);
+  }
+});
 
 /*
 ** Helper functions

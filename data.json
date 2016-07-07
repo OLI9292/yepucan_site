@@ -4,8 +4,6 @@
       "name": "A",
       "img": "images/center-logo.png",
       "group": 1,
-      "x": 550,
-      "y": 300,
       "fixed": true
     },
     {
@@ -32,32 +30,24 @@
       "name": "sector_a",
       "img": "images/lightbulb.png",
       "group": 2,
-      "x": 200,
-      "y": 170,
       "fixed": true
     },
     {
       "name": "sector_b",
       "img": "images/car.png",
       "group": 2,
-      "x": 900,
-      "y": 170,
       "fixed": true
     },
     {
       "name": "sector_c",
       "img": "images/car.png",
       "group": 2,
-      "x": 200,
-      "y": 430,
       "fixed": true
     },
     {
       "name": "sector_d",
       "img": "images/lightbulb.png",
       "group": 2,
-      "x": 900,
-      "y": 430,
       "fixed": true
     },
     {
