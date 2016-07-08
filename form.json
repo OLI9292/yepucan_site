@@ -1,0 +1,2 @@
+angular.callbacks._0({ status : "OK", 
+  info : 'Server side application that validates submitted data and performs the email submission.' })

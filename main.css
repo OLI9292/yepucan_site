@@ -221,7 +221,7 @@ input {
   display: inline;
 }
 
-input.email, input[list] {
+input.email, select {
   width: 350px;
   height: 35px;
   border-radius: 10px;
@@ -229,6 +229,25 @@ input.email, input[list] {
   padding-top: 5px;
   border: 1px solid #ccc;
   margin-bottom: 20px;
+  background-color: white;
+
+  font-size: 18px;
+  line-height: 28px;
+  color: #a9a9a9;
+  font-weight: 700;
+}
+
+.form-group span, .alert-success {
+  display: block;
+  margin-bottom: 10px;
+
+  font-size: 18px;
+  color: black;
+  font-weight: 700;
+}
+
+.alert-success {
+  padding-left: 160px;
 }
 
 input[list] {

@@ -7,112 +7,162 @@
       "fixed": true
     },
     {
-      "name": "person_a",
+      "name": "S1",
+      "img": "images/lightbulb.png",
+      "group": 2,
+      "fixed": true
+    },
+    {
+      "name": "S2",
+      "img": "images/car.png",
+      "group": 2,
+      "fixed": true
+    },
+    {
+      "name": "S3",
+      "img": "images/car.png",
+      "group": 2,
+      "fixed": true
+    },
+    {
+      "name": "S4",
+      "img": "images/lightbulb.png",
+      "group": 2,
+      "fixed": true
+    },
+    {
+      "name": "P1",
       "img": "images/p1.png",
-      "group": 1
+      "group": 3
     },
     {
-      "name": "person_b",
+      "name": "P2",
       "img": "images/p2.png",
-      "group": 1
-    },
-    {
-      "name": "person_c",
-      "img": "images/p3.png",
-      "group": 1
-    },
-    {
-      "name": "person_d",
-      "img": "images/p4.png",
-      "group": 1
-    },
-    {
-      "name": "sector_a",
-      "img": "images/lightbulb.png",
-      "group": 2,
-      "fixed": true
-    },
-    {
-      "name": "sector_b",
-      "img": "images/car.png",
-      "group": 2,
-      "fixed": true
-    },
-    {
-      "name": "sector_c",
-      "img": "images/car.png",
-      "group": 2,
-      "fixed": true
-    },
-    {
-      "name": "sector_d",
-      "img": "images/lightbulb.png",
-      "group": 2,
-      "fixed": true
-    },
-    {
-      "name": "a_company_a",
-      "img": "images/twitter.png",
       "group": 3
     },
     {
-      "name": "a_company_b",
-      "img": "images/dove.png",
-      "group": 3
-    },
-    {
-      "name": "a_company_c",
-      "img": "images/h&m.png",
-      "group": 3
-    },
-    {
-      "name": "b_company_a",
+      "name": "C1",
       "img": "images/apple.png",
-      "group": 3
+      "group": 4
     },
     {
-      "name": "b_company_b",
-      "img": "images/netflix.png",
-      "group": 3
-    },
-    {
-      "name": "b_company_c",
-      "img": "images/nike.png",
-      "group": 3
-    },
-    {
-      "name": "c_company_a",
-      "img": "images/red_bull.png",
-      "group": 3
-    },
-    {
-      "name": "c_company_b",
-      "img": "images/target.png",
-      "group": 3
-    },
-    {
-      "name": "c_company_c",
-      "img": "images/trader_joes.png",
-      "group": 3
-    },
-    {
-      "name": "d_company_a",
+      "name": "C2",
       "img": "images/costco.png",
+      "group": 4
+    },
+    {
+      "name": "P3",
+      "img": "images/p3.png",
       "group": 3
     },
     {
-      "name": "d_company_b",
-      "img": "images/lyft.png",
+      "name": "P4",
+      "img": "images/p4.png",
       "group": 3
     },
     {
-      "name": "d_company_c",
+      "name": "C3",
+      "img": "images/dove.png",
+      "group": 4
+    },
+    {
+      "name": "C4",
       "img": "images/facebook.png",
+      "group": 4
+    },
+    {
+      "name": "P5",
+      "img": "images/p5.png",
       "group": 3
+    },
+    {
+      "name": "P6",
+      "img": "images/p6.png",
+      "group": 3
+    },
+    {
+      "name": "C5",
+      "img": "images/h&m.png",
+      "group": 4
+    },
+    {
+      "name": "C6",
+      "img": "images/lyft.png",
+      "group": 4
+    },
+    {
+      "name": "P7",
+      "img": "images/p7.png",
+      "group": 3
+    },
+    {
+      "name": "P8",
+      "img": "images/p8.png",
+      "group": 3
+    },
+    {
+      "name": "C7",
+      "img": "images/netflix.png",
+      "group": 4
+    },
+    {
+      "name": "C8",
+      "img": "images/nike.png",
+      "group": 4
+    },
+    {
+      "name": "P9",
+      "img": "images/p9.png",
+      "group": 3
+    },
+    {
+      "name": "P10",
+      "img": "images/p10.png",
+      "group": 3
+    },
+    {
+      "name": "C9",
+      "img": "images/red_bull.png",
+      "group": 4
+    },
+    {
+      "name": "C10",
+      "img": "images/target.png",
+      "group": 4
+    },
+    {
+      "name": "P11",
+      "img": "images/p11.png",
+      "group": 3
+    },
+    {
+      "name": "P12",
+      "img": "images/p12.png",
+      "group": 3
+    },
+    {
+      "name": "P13",
+      "img": "images/p13.png",
+      "group": 3
+    },
+    {
+      "name": "P14",
+      "img": "images/p14.png",
+      "group": 3
+    },
+    {
+      "name": "C11",
+      "img": "images/trader_joes.png",
+      "group": 4
+    },
+    {
+      "name": "C12",
+      "img": "images/twitter.png",
+      "group": 4
     },
     {
       "name": "collision",
-      "group": 4
+      "group": 5
     }
   ],
   "links": [
@@ -137,6 +187,31 @@
       "value": 45
     },
     {
+      "source": 7,
+      "target": 6,
+      "value": 45
+    },
+    {
+      "source": 8,
+      "target": 4,
+      "value": 45
+    },
+    {
+      "source": 8,
+      "target": 9,
+      "value": 45
+    },
+    {
+      "source": 5,
+      "target": 2,
+      "value": 45
+    },
+    {
+      "source": 6,
+      "target": 8,
+      "value": 45
+    },
+    {
       "source": 5,
       "target": 0,
       "value": 45
@@ -147,33 +222,58 @@
       "value": 45
     },
     {
+      "source": 6,
+      "target": 3,
+      "value": 45
+    },
+    {
       "source": 7,
-      "target": 0,
+      "target": 12,
       "value": 45
     },
     {
-      "source": 8,
-      "target": 0,
-      "value": 45
-    },
-    {
-      "source": 10,
+      "source": 9,
       "target": 5,
       "value": 45
     },
     {
       "source": 11,
-      "target": 5,
+      "target": 4,
+      "value": 45
+    },
+    {
+      "source": 11,
+      "target": 9,
       "value": 45
     },
     {
       "source": 12,
-      "target": 6,
+      "target": 1,
+      "value": 45
+    },
+    {
+      "source": 12,
+      "target": 5,
+      "value": 45
+    },
+    {
+      "source": 10,
+      "target": 4,
+      "value": 45
+    },
+    {
+      "source": 10,
+      "target": 9,
+      "value": 45
+    },
+    {
+      "source": 15,
+      "target": 2,
       "value": 45
     },
     {
       "source": 13,
-      "target": 6,
+      "target": 14,
       "value": 45
     },
     {
@@ -182,93 +282,203 @@
       "value": 45
     },
     {
-      "source": 15,
-      "target": 7,
-      "value": 45
-    },
-    {
-      "source": 16,
-      "target": 5,
-      "value": 45
-    },
-    {
-      "source": 17,
-      "target": 7,
-      "value": 45
-    },
-    {
-      "source": 18,
-      "target": 8,
-      "value": 45
-    },
-    {
-      "source": 19,
-      "target": 8,
-      "value": 45
-    },
-    {
-      "source": 1,
-      "target": 20,
-      "value": 45
-    },
-    {
-      "source": 2,
-      "target": 9,
-      "value": 45
-    },
-    {
-      "source": 1,
-      "target": 10,
-      "value": 45
-    },
-    {
-      "source": 2,
-      "target": 11,
-      "value": 45
-    },
-    {
-      "source": 3,
+      "source": 13,
       "target": 12,
       "value": 45
     },
     {
-      "source": 4,
-      "target": 13,
-      "value": 45
-    },
-    {
-      "source": 1,
-      "target": 14,
-      "value": 45
-    },
-    {
-      "source": 2,
-      "target": 15,
-      "value": 45
-    },
-    {
-      "source": 3,
+      "source": 14,
       "target": 16,
       "value": 45
     },
     {
-      "source": 4,
-      "target": 17,
+      "source": 16,
+      "target": 12,
+      "value": 45
+    },
+    {
+      "source": 15,
+      "target": 1,
+      "value": 45
+    },
+    {
+      "source": 15,
+      "target": 9,
       "value": 45
     },
     {
       "source": 9,
-      "target": 3,
-      "value": 45
-    },
-    {
-      "source": 19,
       "target": 20,
       "value": 45
     },
     {
+      "source": 19,
+      "target": 2,
+      "value": 45
+    },
+    {
+      "source": 9,
+      "target": 19,
+      "value": 45
+    },
+    {
+      "source": 20,
+      "target": 0,
+      "value": 45
+    },
+    {
+      "source": 17,
+      "target": 0,
+      "value": 45
+    },
+    {
       "source": 18,
+      "target": 3,
+      "value": 45
+    },
+    {
+      "source": 18,
+      "target": 7,
+      "value": 45
+    },
+    {
+      "source": 17,
+      "target": 19,
+      "value": 45
+    },
+    {
+      "source": 20,
+      "target": 8,
+      "value": 45
+    },
+    {
+      "source": 20,
+      "target": 6,
+      "value": 45
+    },
+    {
+      "source": 21,
+      "target": 1,
+      "value": 45
+    },
+    {
+      "source": 22,
+      "target": 2,
+      "value": 45
+    },
+    {
+      "source": 23,
+      "target": 3,
+      "value": 45
+    },
+    {
+      "source": 24,
       "target": 4,
+      "value": 45
+    },
+    {
+      "source": 21,
+      "target": 23,
+      "value": 45
+    },
+    {
+      "source": 22,
+      "target": 11,
+      "value": 45
+    },
+    {
+      "source": 24,
+      "target": 22,
+      "value": 45
+    },
+    {
+      "source": 21,
+      "target": 23,
+      "value": 45
+    },
+    {
+      "source": 21,
+      "target": 14,
+      "value": 45
+    },
+    {
+      "source": 25,
+      "target": 1,
+      "value": 45
+    },
+    {
+      "source": 26,
+      "target": 2,
+      "value": 45
+    },
+    {
+      "source": 27,
+      "target": 3,
+      "value": 45
+    },
+    {
+      "source": 28,
+      "target": 4,
+      "value": 45
+    },
+    {
+      "source": 29,
+      "target": 3,
+      "value": 45
+    },
+    {
+      "source": 30,
+      "target": 4,
+      "value": 45
+    },
+    {
+      "source": 27,
+      "target": 20,
+      "value": 45
+    },
+    {
+      "source": 26,
+      "target": 19,
+      "value": 45
+    },
+    {
+      "source": 30,
+      "target": 8,
+      "value": 45
+    },
+    {
+      "source": 30,
+      "target": 28,
+      "value": 45
+    },
+    {
+      "source": 30,
+      "target": 11,
+      "value": 45
+    },
+    {
+      "source": 25,
+      "target": 16,
+      "value": 45
+    },
+    {
+      "source": 25,
+      "target": 21,
+      "value": 45
+    },
+    {
+      "source": 29,
+      "target": 18,
+      "value": 45
+    },
+    {
+      "source": 29,
+      "target": 27,
+      "value": 45
+    },
+    {
+      "source": 13,
+      "target": 17,
       "value": 45
     }
   ]

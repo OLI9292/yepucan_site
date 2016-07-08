@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" data-ng-app="yepUcan">
 <head>
 <title>yepUcan</title>
-
-<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js" charset="utf-8"></script>
-<link href='https://fonts.googleapis.com/css?family=Roboto:100, 700' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="http://code.angularjs.org/1.2.25/angular.min.js"></script>
+  <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js" charset="utf-8"></script>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:100, 700' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="js/promise-tracker.js"></script>
+  <script type="text/javascript" src="js/form.js"></script>
 </head>
 
 <body>
@@ -36,22 +38,29 @@
 <div class="email-form">
   <h1>Register<h1>
   <h4>We'll notify you when the app becomes available. If you have any other questions, email <a href = "">contact@yepucan.com</a></h4>
-  <form action="">
-    <input type="text" class="email" name="email" placeholder="ebaqdesign@gmail.com">
-    <button type="button">Sign Up</button>
-    <br>
-    <input type="checkbox" class="brand-checkbox" name="brand" value="brand"><h4 class="its-a-brand">It's a brand.</h4>
-    <br>
-    
-    <input class = "brands" list="brands" placeholder="Select category">
-    <datalist id="brands">
-      <option value="Apparel">
-      <option value="Car Service">
-      <option value="Clothing">
-      <option value="Technology">
-      <option value="Health">
-    </datalist> 
-  </form>
+
+  <div data-ng-controller="help">
+    <div id="messages" class="alert alert-success" data-ng-show="messages" data-ng-bind="messages"></div>
+    <div data-ng-show="progress.active()"></div>
+    <form name="helpForm" novalidate role="form">
+      <div class="form-group">
+        <label for="email"></label>
+        <span class="label label-danger" data-ng-show="submitted && helpForm.email.$error.required">Required!</span>
+        <span class="label label-danger" data-ng-show="submitted && helpForm.$error.email">Invalid email!</span>
+        <input type="email" name="email" placeholder="ebaqdesign@gmail.com" data-ng-model="email" class="email" required />  
+        <button data-ng-disabled="progress.active()" data-ng-click="submit(helpForm)" class="btn btn-default">Sign Up</button>
+      </div>
+
+      <input type="checkbox" class="brand-checkbox" name="brand" value="brand"><h4 class="its-a-brand">It's a brand.</h4><br><br>
+
+      <div class="form-group">
+        <label for="category"></label>
+        <select name="category" placeholder="Select category" data-ng-model="category" data-ng-options="id as value for (id, value) in categoryOptions" class="brands">
+          <option value='' disabled selected>Select category</option>
+        </select>
+      </div>
+    </form>
+  </div>
 </div>
 
 <div class="thin-banner"></div>
@@ -62,7 +71,7 @@
 
 <div class="footer"><img class="footer-logo" src="images/footer-logo.png"></div>
 
-<script type="text/javascript" src="graph.js"></script>
+<script type="text/javascript" src="js/graph.js"></script>
 <link rel="stylesheet" type="text/css" href="main.css">
 </body>
 </html>
