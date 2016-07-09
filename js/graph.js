@@ -12,8 +12,8 @@ if (w < 800) {
   width = w;
 }
 
-if (h < 550) {
-  height = 550;
+if (h < 450) {
+  height = 450;
 } else {
   height = h;
 }
@@ -24,52 +24,61 @@ var svg = d3.select("#vis").append("svg")
 
 var force = d3.layout.force()
     .charge(-30000)
-    .friction(0.15)
+    .friction(0.17)
     .size([width, height])
     .linkDistance(function(d, i) { return d.value })
-    .linkStrength(1.5);
+    .linkStrength(1.6);
 
 d3.json("data.json", function(error, json) {
   if (error) throw error;
 
   var screenSize = width * height;
 
-  if (screenSize > 850000) {
+  if (screenSize > 750000) {
     json['nodes'] = json['nodes'];
     json['links'] = json['links'];
-  } else if (screenSize > 750000) {
-    json['nodes'] = json['nodes'].slice(0, 25);
-    json['links'] = json['links'].slice(0, 47);
   } else if (screenSize > 650000) {
-    json['nodes'] = json['nodes'].slice(0, 21);
-    json['links'] = json['links'].slice(0, 38);
+    json['nodes'] = json['nodes'].slice(0, 25);
+    json['links'] = json['links'].slice(0, 49);
   } else if (screenSize > 550000) {
+    json['nodes'] = json['nodes'].slice(0, 21);
+    json['links'] = json['links'].slice(0, 40);
+  } else if (screenSize > 450000) {
     json['nodes'] = json['nodes'].slice(0, 17);
-    json['links'] = json['links'].slice(0, 28);
+    json['links'] = json['links'].slice(0, 30);
   } else {
-    json['nodes'] = json['nodes'].slice(0, 13);
-    json['links'] = json['links'].slice(0, 18);
+    json['nodes'] = json['nodes'].slice(0, 11);
+    json['links'] = json['links'].slice(0, 16);
   }
+
+  json['nodes'].push({
+      "name": "center-image",
+      "img": "images/center-logo.png",
+      "group": 1,
+      "fixed": true,
+      "x": width / 2,
+      "y": height / 2
+    })
 
   // Center foci
   json['nodes'][0]['x'] = width / 2;
   json['nodes'][0]['y'] = height / 2;
 
   // Top-left foci
-  json['nodes'][1]['x'] = width / 5;
-  json['nodes'][1]['y'] = height / 4;
+  json['nodes'][1]['x'] = width / 4;
+  json['nodes'][1]['y'] = height / 3;
 
   // Top-right foci
-  json['nodes'][2]['x'] = 4 * width / 5;
-  json['nodes'][2]['y'] = height / 4;
+  json['nodes'][2]['x'] = 3 * width / 4;
+  json['nodes'][2]['y'] = height / 3;
 
   // Bottom-left foci
-  json['nodes'][3]['x'] = width / 5;
-  json['nodes'][3]['y'] = 3 * height / 4;
+  json['nodes'][3]['x'] = width / 4;
+  json['nodes'][3]['y'] = 2 * height / 3;
 
   // Bottom-right foci
-  json['nodes'][4]['x'] = 4 * width / 5;
-  json['nodes'][4]['y'] = 3 * height / 4;
+  json['nodes'][4]['x'] = 3 * width / 4;
+  json['nodes'][4]['y'] = 2 * height / 3;
 
   force
       .nodes(json.nodes)
@@ -94,10 +103,10 @@ d3.json("data.json", function(error, json) {
 
   node.append("image")
     .attr("xlink:href",  function(d) { return d.img;})
-    .attr("x", function(d, i) { return (i === 0) ? -62.5 : -35})
-    .attr("y", function(d, i) { return (i === 0) ? -62.5 : -35})
-    .attr("width", function(d, i) { return (i === 0) ? 125 : 70})
-    .attr("height", function(d, i) { return (i === 0) ? 125 : 70});
+    .attr("x", function(d, i) { return (i === json.nodes.length - 1) ? -62.5 : -35})
+    .attr("y", function(d, i) { return (i === json.nodes.length - 1) ? -62.5 : -35})
+    .attr("width", function(d, i) { return (i === json.nodes.length - 1) ? 125 : 70})
+    .attr("height", function(d, i) { return (i === json.nodes.length - 1) ? 125 : 70});
 
   force.on("tick", function(e) {
 
@@ -133,10 +142,10 @@ d3.json("data.json", function(error, json) {
 
     force.linkStrength(function(l, i) {
       if (closestLinksIndices.indexOf(i) >= 0) {
-        return 3.2;
+        return 3.5;
       } 
       else {
-        return 1.5;
+        return 1.6;
       }
     });
 
