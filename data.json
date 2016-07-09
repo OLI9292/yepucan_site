@@ -2,7 +2,7 @@
   "nodes": [
     {
       "name": "center",
-      "img": "",
+      "img": "images/center-logo.png",
       "group": 1,
       "fixed": true
     },
@@ -213,7 +213,7 @@
     },
     {
       "source": 5,
-      "target": 8,
+      "target": 1,
       "value": 25
     },
     {
