@@ -2,6 +2,7 @@ body {
   font-family: 'Roboto', sans-serif;
   letter-spacing: 1.3px;
   width: 100%;
+  min-width: 700px;
 }
 
 h1 {
@@ -57,9 +58,7 @@ input, input[list]:-ms-input-placeholder {
 
 #vis {
   height: 100vh;
-  min-height: 700px;
   width: 100%;
-  min-width: 700px;
   margin: auto;
   text-align: center;
 
@@ -157,7 +156,6 @@ svg {
 .bottom-banner {
   height: 175px;
   width: 100%;
-  min-width: 1100px;
   margin-top: -20px;
   
   color: white;
@@ -193,7 +191,7 @@ svg {
 .email-form {
   height: 400px;
   width: 100%;
-  min-width: 1100px;
+  min-width: 400px;
   
   padding-top: 50px;
   background-color: #f2f2f2;
@@ -211,6 +209,7 @@ form {
 .email-form h1, .email-form h4 {
   padding-left: 160px;
   margin-right: 100px;
+  min-width: 500px;
 }
 
 input {
@@ -281,7 +280,6 @@ input[type=checkbox]
 
 .thin-banner {
   width: 100%;
-  min-width: 1100px;
   height: 10px;
 
   background: rgb(136, 61, 210); /* For browsers that do not support gradients */
@@ -293,8 +291,7 @@ input[type=checkbox]
 
 .bottom-brands {
   width: 100%;
-  min-width: 1100px;
-  height: 300px;
+  height: 250px;
 }
 
 .bottom-brands-images {
@@ -307,7 +304,6 @@ input[type=checkbox]
 
 .footer {
   width: 100%;
-  min-width: 1100px;
   height: 200px;
   background-color: #080808;
 }
