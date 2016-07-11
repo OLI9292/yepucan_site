@@ -188,6 +188,10 @@ $(".brands").on("input", function() {
   }
 });
 
+//
+$(".header").css("width", w);
+$(".register").css("width", w);
+
 /*
 ** Helper functions
 */ 

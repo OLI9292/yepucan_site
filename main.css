@@ -71,8 +71,6 @@ input, input[list]:-ms-input-placeholder {
 }
 
 .header {
-  width: 100%;
-  min-width: 700px;
   margin: auto;
   text-align: center;
 }
@@ -92,14 +90,12 @@ input, input[list]:-ms-input-placeholder {
 }
 
 .register {
-  margin-top: -75px;
-  width: 100%;
-  min-width: 700px;
   text-align: center;
+  margin: auto;
+  margin-top: -74px;
 }
 
 .register button {
-  margin: auto;
   background-color: white;
   color: #080808;
   border: 2px solid rgb(40, 141, 208);
@@ -304,8 +300,8 @@ input[type=checkbox]
 .bottom-brands-images {
   width: 900px;
   height: auto;
-  text-align: center;
-  margin-left: 155px;
+  display:block;
+  margin:auto;
   margin-top: 50px;
 }
 
