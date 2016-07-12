@@ -192,13 +192,13 @@ $(".brands").on("input", function() {
 var minWidthElements = ['#vis', '.header', '.register', '.bottom-banner',
                         '.email-form', '.bottom-brands', '.thin-banner', '.footer']
 
-if (w > 1100) {
+if (w > 1000) {
   for (var i = 0; i < minWidthElements.length; i++) {
     $(minWidthElements[i]).css("min-width", w);
   }
 } else {
   for (var i = 0; i < minWidthElements.length; i++) {
-    $(minWidthElements[i]).css("min-width", 1100);
+    $(minWidthElements[i]).css("min-width", 1000);
   }
 }
 
