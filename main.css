@@ -5,6 +5,10 @@ body {
   min-width: 700px;
 }
 
+svg {
+  z-index: 1;
+}
+
 h1 {
   font-size: 30px;
   color: #636363;
@@ -129,28 +133,36 @@ img {
 }
 
 .mid-section {
-  width: 100%;
   height: 490px;
-  margin-top: 31px;
+  margin-top: 30px;
   z-index: 3;
 }
 
-svg {
-  z-index: 1;
+.mid-section-copy {
+  display: inline;
+  position: absolute;
+  margin-left: 15%;
+  margin-top: 150px;
+  padding-left: 50px;
 }
 
 .mid-section img {
   height: 100%;
   width: auto;
-  margin-left: 150px;
+  margin-left: 15%;
+  min-width: 200px;
+
   float: left;
 }
 
-.mid-section-copy {
-  margin-left: 650px;
-  width: 400px;
-  position: absolute;
-  margin-top: 165px;
+@media screen and ( max-width: 1000px ){
+  .mid-section img {
+    margin-left: 150px;
+  }
+}
+
+.mid-section text {
+  margin-right: 30%;
 }
 
 .bottom-banner {
@@ -174,7 +186,11 @@ svg {
   color: white;
   padding-left: 160px;
   line-height: 175px;
-  width: 70%;
+}
+.bottom-banner img {
+  margin-right: 200px;
+  padding-top: 15px;
+  float: right;
 }
 
 .bottom-banner-logo {
@@ -184,9 +200,6 @@ svg {
   margin-top: -155px;
   float: left;
 }
-
-
-
 
 .email-form {
   height: 400px;
@@ -301,6 +314,7 @@ input[type=checkbox]
   margin:auto;
   margin-top: 50px;
 }
+
 
 .footer {
   width: 100%;
